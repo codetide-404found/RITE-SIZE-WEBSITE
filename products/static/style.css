@@ -1,0 +1,329 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: orange;
+  color: #333;
+}
+
+/* Header / Navbar */
+header {
+  background: orange;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #333;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#cartBtn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#cartBtn:hover {
+  background: white;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+   height: 90vh; /* Full screen height */
+  background-image: url("images/paper.jpg");
+  background-size: cover;   /* ensures image fills the section */
+  background-position: center; /* keeps the important part visible */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: yellow;
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 30px;
+
+}
+
+
+
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgb(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  background: rgba(0,0,0,0.4);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.hero img {
+  width: 100%;   /* make it span the full width */
+  height: 60vh; /* make it span the full height of section */
+  object-fit: cover; /* zooms in to fill without distortion */
+}
+
+.products {
+  padding: 50px 30px;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+/* Pet Foods Section (Orange Background) */
+.orange-bg {
+  background:black;
+  color: white;
+  padding: 70px 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* Pet Accessories + Others (Black Background, Orange Text) */
+.black-bg {
+  background: black;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05); /* transparent background */
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  padding: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.product-card button {
+  background: orange;
+  color: black;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background: #ff6600;
+  color: black;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* Services Section */
+.services {
+  padding: 70px 40px;
+  background: black;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff914d;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: black;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid black;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: orange;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+.service-card p {
+  font-size: 24px;
+  color: orange;
+}
+/* Booking Form */
+.booking {
+  padding: 80px 40px;
+  background:black;
+  color: white;
+}
+
+.booking form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking input,
+.booking select,
+.booking textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.booking button {
+  padding: 12px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.booking button:hover {
+  background: #333;
+}
+
+
+
+
+.map-section {
+  background: black;
+  color: orange;
+  text-align: center;
+  padding: 100px 50px;
+  margin-top: 40px;
+}
+
+.map-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 3px solid orange;
+  border-radius: 12px;
+  overflow: hidden;
+   box-shadow: 0 0 15px rgba(255,165,0,0.5);
+}
+.map-container iframe {
+  width: 100%;
+  height: 400px;  /* you can increase to 600 if you want it taller */
+  border: none;
+
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+
+
+
+
